@@ -94,3 +94,44 @@ let qqTimes = process.env["qqTimes"] || 30;
 定时规则：券时间前20秒，比如这个券11点开始，那么格式为：40 59 10 * * *
 
 若需要检测ck，则创建检测ck任务：
+
+![](https://i.mji.rip/2023/10/13/c885a76808801eeee10ad6bcc892d310.png)
+
+此为开始前10分钟检测整点券的ck。
+
+#### 4.宝哥青龙Tools提交版
+
+将压缩包中文件放在 服务器/root/ql/data/mt/目录下。
+
+重点在于使用插件，即ckapi中的writeck.js文件。
+
+青龙Tools中请为变量绑定次插件即可。
+
+并在服务器上运行，命令：
+
+```
+cd /root/ql/data/mt/MeiTuan
+
+./MeiTuan-linux-amd64 2>&1 &
+
+```
+
+#### 5.cdk管理、ck校验程序使用方法
+
+宝塔创建nodejs项目即可，自行百度。
+
+接口：
+
+ip:端口/cdk，获取cdk
+
+ip:端口/writeck，获取用户名并将ck、用户名写入到宝哥配置文件中。
+
+
+
+将青龙Tools获取到的CDK.txt文件放到ckapi目录下，并执行： 
+
+```
+node readCdk.js
+```
+
+即可将cdk写入文件中，以供用户获取。
