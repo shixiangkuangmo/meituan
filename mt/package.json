@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "axios": "^1.5.1",
+    "cookie": "^0.5.0",
+    "https-proxy-agent": "^7.0.2",
+    "jsdom": "^22.1.0",
+    "jsdom-browser.screen": "^0.2.2",
+    "request": "^2.88.2",
+    "superagent": "^8.1.2",
+    "superagent-proxy": "^3.0.0",
+    "xhr2": "^0.2.1"
+  }
+}
