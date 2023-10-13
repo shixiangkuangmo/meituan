@@ -72,7 +72,7 @@ app.post("/writeCk", async function (request, response) {
     msg: "成功",
   };
 
-  //xxxx为验证值，防止乱请求，自行修改。
+  //xxxx为请求验证值，防止乱请求，自行修改。
   if (verify != "xxxx") {
     result = {
       state: "403",
