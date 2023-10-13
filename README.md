@@ -116,6 +116,12 @@ cd /root/ql/data/mt/MeiTuan
 
 ```
 
+若需要检测ck，则青龙创建命令：
+
+![](https://i.mji.rip/2023/10/13/9e139b9cab5a9d6fcb4f96ec3ffc97da.png)
+
+
+
 #### 5.cdk管理、ck校验程序使用方法
 
 宝塔创建nodejs项目即可，自行百度。
