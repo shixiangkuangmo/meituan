@@ -31,7 +31,7 @@ function main(env) {
       },
       json: true,
       dataType: "json",
-      body: { ck: env,verify:"xxxx" },//请求
+      body: { ck: env,verify:"xxxx" },
     });
 
     if (result) {

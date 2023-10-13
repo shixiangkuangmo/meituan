@@ -61,7 +61,6 @@ function isFileExisted(path_way) {
 app.post("/writeCk", async function (request, response) {
   let strck = request.body.ck;
   let verify = request.body.verify;
-  console.log(strck);
   let ck = {
     remark: "",
     cookie_str: strck,
@@ -71,8 +70,7 @@ app.post("/writeCk", async function (request, response) {
     state: "success",
     msg: "成功",
   };
-
-  //xxxx为请求验证值，防止乱请求，自行修改。
+    console.log(request.body.verify,123)
   if (verify != "xxxx") {
     result = {
       state: "403",
@@ -102,7 +100,7 @@ app.post("/writeCk", async function (request, response) {
     console.log(resdata);
     if (resdata.status == 200 && resdata.data.msg == "成功") {
       ck.remark = resdata.data.data.userName;
-      let strpath = "./db.json";
+      let strpath = "/root/ql/data/mt/MeiTuan/data/config/users.json";
       let isCf = false;
       try {
         let res = fs.readFileSync(strpath, "utf8");
