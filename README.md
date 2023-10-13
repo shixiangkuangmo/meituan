@@ -144,5 +144,4 @@ ip:端口/writeck，获取用户名并将ck、用户名写入到宝哥配置文�
 node readCdk.js
 ```
 
-即可将cdk写入cdk.json文件中，以供用户获取。
-
+即可将cdk写入文件中，以供用户获取。
