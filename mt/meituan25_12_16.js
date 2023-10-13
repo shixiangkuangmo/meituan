@@ -43,7 +43,7 @@ let userAgent = "Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,li
 const fullUrl = `test`;
 let h5guardData = [];
 let exTimes = 0;
-let logTimes = 0;
+let logTimes = [];
 
 let ck="";
 let cookies = [];
@@ -110,6 +110,7 @@ function getCookies(){
   watchCookie(ckTimes);
   ckArr = ck.split("#");
   for(let i=0;i<ckArr.length;i++){
+    logTimes.push(0);
     setTimeout(()=>{
       try{
         axios.post(
@@ -212,7 +213,8 @@ function watchValue(v){
 }
 function watchLogs(v){
   setTimeout(() => {
-    if(v != cookies.length*qqTimes){
+    let len = v.reduce((a,b) => a+b);
+    if(len != cookies.length*qqTimes){
       watchLogs(logTimes)
     }else{
       console.log(logObj);
@@ -238,13 +240,13 @@ function startMain(){
         setTimeout(() => {
           intervals[i] = setInterval(() => {
             nums[i]++;
-            logTimes++;
+            logTimes[i]++;
             axios
               .post(h5guardData[i]["url"], h5guardData[i]["body"], { headers, json: true })
               .then((answer) => {
                 logObj[h5guardData[i]["remark"]].push(sq_coupon.desc + answer.data.msg + toDateString(new Date) + ". userId: " + headers["Cookie"].match(/userId=(\d+)/)[1]);
                 if(answer.data.msg.indexOf("成功")>-1){
-                  logTimes = logTimes + qqTimes - logTimes%qqTimes;
+                  logTimes[i] = qqTimes;
                   ee.setEnvVar("mt_sq25_12_16",headers["Cookie"]);
                   clearInterval(intervals[i]);
                 }
@@ -254,7 +256,7 @@ function startMain(){
                 logObj[h5guardData[i]["remark"]].push(sq_coupon.desc + err.response.status.toString().status + err.response.statusText + toDateString(new Date) + ". userId: " + headers["Cookie"].match(/userId=(\d+)/)[1])
                 
                 clearInterval(intervals[i]);
-                logTimes = logTimes + qqTimes - logTimes%qqTimes;
+                logTimes[i] = qqTimes;
               });
             if (nums[i] === qqTimes) {
               clearInterval(intervals[i]);
