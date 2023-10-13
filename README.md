@@ -6,7 +6,7 @@
 
 <font color=red>下载说明：如果你懂一点nodejs，则不需要下载node_modules文件夹，下载后，在程序目录下执行 npm install 即可</font>
 
-
+##### 特别说明，mt文件夹下的meituan25_12_11.js为增加了HTTP代理请求版，防止访问过多导致403，未做详细测试，自行研究。
 
 
 ### 一.文件夹说明
