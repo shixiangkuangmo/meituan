@@ -1,6 +1,10 @@
 # meituan
  美团相关
 
+
+
+<font color=red>下载说明：如果你懂一点nodejs，则不需要下载node_modules文件夹，下载后，在程序目录下执行 npm install 即可</font>
+
 ### 一.文件夹说明
 
 mt文件夹为脚本相关，包括检测ck、更新ck、美团算法、随机UA、神券配置等。
