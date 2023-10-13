@@ -1,0 +1,19 @@
+{
+  "name": "ckapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "食翔狂魔",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "express": "^4.18.2",
+    "lowdb": "^1.0.0",
+    "request": "^2.88.2",
+    "request-ip": "^3.3.0",
+    "sync-request": "^6.1.0"
+  }
+}
