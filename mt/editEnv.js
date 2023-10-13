@@ -5,8 +5,8 @@ async function setEnvVar(envName, ck,title) {
     let token = "";
   try{
   let resdata = await axios.post('http://49.232.101.218:5700/api/user/login',{
-    "username": "sxkm",
-    "password": "a82664730"
+    "username": "",
+    "password": ""
   });
   if(resdata.data.code == 200){
     token = resdata.data.data.token;
