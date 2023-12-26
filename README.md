@@ -14,8 +14,7 @@
 #### 1.若出现403错误，请调整运行次数(qqTimes)以及抢券时间，避免请求次数过多导致403
 # 脚本介绍
 ### mt抢券相关
- 
-## 体验地址：http://49.232.101.218:15000/#/
+
 
 
 <font color=red>下载说明：如果你懂一点nodejs，则不需要下载node_modules文件夹，下载后，在程序目录下执行 npm install 即可</font>
@@ -81,7 +80,7 @@ node D:\nodejs\mt\meituan25_12_11.js
 
 node后为脚本完整路径。
 
-示例:![](https://i.mji.rip/2023/10/13/e37a60916e1eb3dfcdcb311a7c72f9e8.png)
+示例:![](https://i.miji.bid/2023/12/26/33d84ca4b13d7142406623b2424fc35d.png)
 
 默认运行次数为30，若想修改次数，修改脚本中第6行的30。
 
